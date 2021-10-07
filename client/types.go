@@ -33,10 +33,10 @@ type SessionRegisterResponse struct {
 	LastName string `json:"last_name"`
 }
 
-// CreateSessionResponse Establishes a new session to the network, new and unauthenticated sessions expires after 10 minutes of inactivity,
+// CreateSessionStruct Establishes a new session to the network, new and unauthenticated sessions expires after 10 minutes of inactivity,
 // authenticating to the session will increase the expiration time to 72 hours of inactivity.
 // This timer is reset whenever the session is used in one way or another.
-type CreateSessionResponse struct {
+type CreateSessionStruct struct {
 	// The Public Hash of the client that's establishing the session
 	PublicHash string `json:"public_hash"`
 	// The Private Hash of the client used when establishing the session
