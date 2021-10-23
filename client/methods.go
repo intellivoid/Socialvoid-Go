@@ -3,9 +3,9 @@ package client
 import (
 	"crypto/sha1"
 	"fmt"
+	"github.com/pquerna/otp/totp"
 	"time"
 )
-import "github.com/pquerna/otp/totp"
 
 func NewSession(publicHash string, privateHash string) (c *CreateSessionStruct) {
 	c.PrivateHash = privateHash
